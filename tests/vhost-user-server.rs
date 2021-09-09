@@ -288,7 +288,7 @@ fn vhost_user_get_inflight(path: &Path, barrier: Arc<Barrier>) {
         num_queues: 1,
         queue_size: 256,
     };
-    assert!(master.get_inflight_fd(&inflight).is_err());
+    assert!(master.get_inflight_fd(&inflight).is_ok());
 }
 
 #[test]
